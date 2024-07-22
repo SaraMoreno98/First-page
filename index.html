@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 -->
 <!--ENLACE CSS-->
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
     
 
-<body>
+<body class="container">
     <header>
-        <h1>Sara Moreno <span>{ Diseñadora | Web Developer }</span></h1>
+        <h1 class="tit">Sara Moreno <span>{ Diseñadora | Web Developer }</span></h1>
         <nav>
             <a href="#" target="_blank">Inicio</a>
             <a href="#" target="_blank">Sobre mí</a>
@@ -30,55 +32,69 @@
         <section class="banner">
             <h2>Diseño | Desarrollo Web</h2>
             <p><img src="img/icons/pin.svg" alt="Icono de dirección">Armilla, Granada</p>
-            <a href="contacto.html" target="_blank"><button>Contacto</button></a>
+            <a class="btn-contacto" href="contacto.html" target="_blank"><button>Contacto</button></a>
         </section>
 
-    <!--SERVICIOS-->
-        <section>
-            <h2>Servicios</h2>
-            <div>
-                <h3>Diseño Gráfico</h3>
-                <img src="img/icons/writing.svg" alt="Icono de Diseño Gráfico">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni libero id mollitia a temporibus? Soluta culpa, eaque nulla veritatis sed facilis ducimus voluptatem non quo. Quam ipsam nostrum at enim.</p>
-            </div>
-            <div>
-                <h3>Diseño Web</h3>
-                <img src="img/icons/robot.svg" alt="Icono de Diseño Web">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni libero id mollitia a temporibus? Soluta culpa, eaque nulla veritatis sed facilis ducimus voluptatem non quo. Quam ipsam nostrum at enim.</p>
-            </div>
-            <div>
-                <h3>Woo-Comerce</h3>
-                <img src="img/icons/shopping-bag.svg" alt="Icono de Woo-Comerce">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni libero id mollitia a temporibus? Soluta culpa, eaque nulla veritatis sed facilis ducimus voluptatem non quo. Quam ipsam nostrum at enim.</p>
-            </div>
+        <section class="box">
+        <!--SERVICIOS-->
+            <section>
+                <h2 class="tit-servicios">Servicios</h2>
+                <section class="servicios">
+                    <div class="contenedor-grafico">
+                        <center><img class="icono" src="img/icons/writing.svg" alt="Icono de Diseño Gráfico">
+                        <h3>Diseño Gráfico</h3></center>
+                        <p>Me especializo en transformar ideas visuales impactantes que comunican efectivamente tu mensaje y capturanla esencia de tu marca. Con un enfoque creativo, mi objetivo es ofrecer soluciones innovadoras y personalizadas que destaquen en el mercado.</p>
+                    </div>
+                    <div class="contenedor-web">
+                        <center><img class="icono" src="img/icons/robot.svg" alt="Icono de Diseño Web">
+                        <h3>Diseño Web</h3></center>
+                        <p>Creo sitios que no solo son visualmente atractivos, sino también intuitivos y funcionales. Mi enfoque combina creatividad con tecnología para desarrollar experiencias de usuario únicas que representan fielmente la esencia de tu marca.</p>
+                    </div>
+                    <div class="contenedor-woo">
+                        <center><img class="icono" src="img/icons/shopping-bag.svg" alt="Icono de Woo-Comerce">
+                        <h3>Woo-Comerce</h3></center>
+                        <p>Me dedico a crear tiendas en línea que no son solo esteticamente atractivas, sino también optimizadas para una experiencia de compra fluida y efectiva. Con un enfoque en el diseño y la funcionalidad, personalizo cada tienda para reflejar la identidad de tu marca y maximizar tus ventas.</p>
+                    </div>
+                </section>
+            </section>
+    
+        <!--CONTACTO-->
+            <section class="caja-contacto">
+                <h2>Contacto</h2>
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>Contacta conmigo</legend>
+                        <div class="grid-contacto">
+                            <div class="container-input">
+                                <label for="">Nombre</label>
+                                <input type="text" name="" id="" placeholder="Nombre">
+                            </div>
+        
+                            <div class="container-input">
+                                <label for="">Teléfono</label>
+                                <input type="tel" maxlength="9" name="" id="" placeholder="Teléfono">
+                            </div>
+        
+                            <div class="container-input">
+                                <label for="">Email</label>
+                                <input type="email" name="" id="mail" placeholder="email@email.com">
+                            </div>
+        
+                            <div class="container-input">
+                                <label for="">Comentario</label>
+                                <textarea name="" id="textarea" placeholder="¿Qué quieres decirme?"></textarea>
+                            </div>
+                        </div>
+    
+                        <center><input class="enviar btn-contacto" type="submit" value="Enviar"></input></center>
+                    </fieldset> 
+                </form>
+            </section>        
         </section>
-
-    <!--CONTACTO-->
-        <section>
-            <h2>Contacto</h2>
-            <form action="" method="get">
-                <fieldset>
-                    <legend>Contacta conmigo</legend>
-                    <label for="">Nombre</label>
-                    <input type="text" name="" id="" placeholder="Nombre">
-
-                    <label for="">Teléfono</label>
-                    <input type="tel" maxlength="9" name="" id="" placeholder="Teléfono">
-
-                    <label for="">Email</label>
-                    <input type="email" name="" id="mail" placeholder="email@email.com">
-
-                    <label for="">Comentario</label>
-                    <textarea name="" id="textarea" placeholder="¿Qué quieres decirme?"></textarea>
-
-                    <input class="enviar" type="submit" value="Enviar"></input>
-                </fieldset> 
-            </form>
-        </section>        
     </main>
 
     <footer>
-        <p>Todos los derechos reservados | Sara Moreno</p>
+        <p>Todos los derechos reservados | &copy; Sara Moreno</p>
     </footer>
 </body>
 </html>

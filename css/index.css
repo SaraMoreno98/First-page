@@ -11,7 +11,7 @@ html{
 
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 100%;
+    box-sizing: border-box;
     background-color: var(--white);
 }
 
@@ -26,6 +26,12 @@ footer{
 h1{
     font-weight: 800;
     font-size: 4rem;
+}
+
+.tit{
+    font-size: 50px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 h2{
@@ -51,7 +57,7 @@ nav{
     font-size: 1.5rem;
 }
 
-a, p, label {
+a, p {
     font-size: 1.7rem;
 }
 
@@ -63,19 +69,60 @@ a{
 
 a:hover{
     font-weight: bold;
+    color: black;
 }
 
 .banner{
+    height: 250px;
+    align-content: center;
     text-align: center;
+    color: var(--white);
+    background-image: url('../img/marissa-demuner-Y98QP5CA4KE-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-contacto{
+    cursor: pointer;
+}
+
+.btn-contacto:hover{
+    font-weight: bold;
+    color: black;
+}
+
+.box {
+    background-color: rgb(212, 212, 212);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 16px;
+}
+
+.servicios{
+    display: flex;
+}
+
+.tit-servicios{
+    padding-top: 16px;
+}
+
+.caja-contacto{
+    padding-bottom: 24px;
+}
+
+.contenedor-grafico, .contenedor-web, .contenedor-woo{
+    padding-inline: 32px;
+}
+
+.icono{
+    background-color: var(--yellow);
     padding: 16px;
+    border-radius: 50%;
 }
 
 button{
     background-color: var(--yellow);
-}
-
-.enviar{
-    background-color: var(--green);
 }
 
 button, .enviar{
@@ -103,8 +150,95 @@ legend{
     padding-bottom: 8px;
     text-align: center;
 }
+label{
+    font-size: large;
+    margin-bottom: 8px;
+}
+
+.container-input{
+    margin: 8px;
+}
+
+.container-input label{
+    font-weight: bold;
+    display: block;
+}
+
+.container-input input{
+    width: 100%;
+    padding-bottom: 16px;
+    border-radius: 3px;
+    border: 0;
+}
+
+.container-input textarea{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: 0;
+}
 
 textarea {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
+}
+
+.enviar{
+    background-color: var(--green);
+    font-size: large;
+    width: 100%;
+}
+
+/*MEDIA MOVIL*/
+@media (min-width: 300px) {
+    
+    .tit{
+        font-size: 32px;
+    }
+
+    .servicios{
+        flex-direction: column;
+    }
+
+    .caja-contacto{
+        margin-right: 32px;
+    }
+}
+
+/*MEDIA TABLET*/
+@media (min-width: 768px) {
+    .servicios{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .contenedor-grafico, .contenedor-web{
+        width: 40%;
+    }
+
+    /*GRID 1 FILA 2 COLS / 2 FILAS 1 COL*/
+    .grid-contacto{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+
+    .container-input:nth-child(3), .container-input:nth-child(4){
+        grid-column: 1/3;
+    }
+}
+
+/*MEDIA PC*/
+@media (min-width: 912px){
+    .servicios{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .contenedor-grafico, .contenedor-web, .contenedor-woo{
+        width: 30%;
+    }
+
+    .enviar{
+        width: 30%;
+    }
 }
